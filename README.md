@@ -1,4 +1,4 @@
-Voice Activity Detection (VAD) is a preprocessing step for several speech processing applications. Handling this task is not a straightforward task in noisy environments since the statistics of the noise are unknown beforehand.
+**Voice Activity Detection (VAD)** is a preprocessing step for several speech processing applications. Handling this task is not a straightforward task in noisy environments since the statistics of the noise are unknown beforehand.
 
 In the presence of stationary noise alone, the spectrum of the signal in short time intervals could be used to measure the spectral
 flatness in order to decide on the voice activity. However, this approach cannot help when the noise spectrum changes quickly, like in the case of transient noises which are abrupt interferences, such as keyboard taps, knocks.
