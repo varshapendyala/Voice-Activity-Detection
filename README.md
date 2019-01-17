@@ -8,6 +8,7 @@ Speech and Transients may often appear similar when represented by MFCCs in the 
 It is shown by [Dov et al.](https://israelcohen.com/wp-content/uploads/2018/05/TASLP_Dec2016.pdf) that Mahalanobis distance between the observable signals approximates the Euclidean distance between the underlying generating variables. We use this metric to compute the similarity matrix for *Spectral clustering* that divides given frames into two clusters.(i.e., speech presence and speech absence frames). The eigen vectors of the normalized Laplacian of the similarity matrix and the *GMM* are utilized to compute the likelihood ratio for voice activity detection. Implementation details can be found in our [report.](https://github.com/varshapendyala/Voice-Activity-Detection/blob/master/voice-activity-detection.pdf)
 
 [lowd_create.py](https://github.com/varshapendyala/Voice-Activity-Detection/blob/master/lowd_create.py): Creating low dimensional representation of signal frames
-[gmm_model_fit.py](https://github.com/varshapendyala/Voice-Activity-Detection/blob/master/gmm_model_fit.py): The implemented algorithm is a supervised learning algorithm. During training we estimate the parameters of the
-GMMs that model the first three dominant eigen vectors of the normalized Laplacian matrix.
-[test.py](https://github.com/varshapendyala/Voice-Activity-Detection/blob/master/test.py): During testing, likelihood ratio of the new frame w.r.t two GMMs is found. With appropriately chosen threshold, the label for the frame is assigned.
+
+[gmm_model_fit.py](https://github.com/varshapendyala/Voice-Activity-Detection/blob/master/gmm_model_fit.py): During training we estimate the parameters of the GMMs that model the first three dominant eigen vectors of the normalized Laplacian matrix.
+
+[test.py](https://github.com/varshapendyala/Voice-Activity-Detection/blob/master/test.py): While testing, likelihood ratio of the new frame w.r.t two GMMs is found. With appropriately chosen threshold, the label for the frame is assigned.
