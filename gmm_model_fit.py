@@ -18,12 +18,12 @@ from scipy.stats import multivariate_normal
 from mpl_toolkits.mplot3d import Axes3D
 
 
-f1=scipy.io.loadmat('F:/Semester VII/speech_project/created_me/Training/Nstationary/SpeechTransient_Transient/knock_lowd.mat')
+f1=scipy.io.loadmat('knock_lowd.mat')
 f1=f1['knock_lowd']
 a=f1.shape[0]
 b=f1.shape[1]
 f1=f1.reshape((a*b,4))
-f2=scipy.io.loadmat('F:/Semester VII/speech_project/created_me/Training/Nstationary/SpeechTransient_Transient/key_lowd.mat')
+f2=scipy.io.loadmat('key_lowd.mat')
 f2=f2['key_lowd']
 a=f2.shape[0]
 b=f2.shape[1]
