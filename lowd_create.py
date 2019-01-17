@@ -17,7 +17,7 @@ store_lowd=[]
 #remaining_lowd=[]
 winlen=0.032
 winstep=0.016
-newdata_mat=scipy.io.loadmat('F:/Semester VII/speech_project/created_me/Training/Nstationary/SpeechTransient_Transient/filenames.mat')
+newdata_mat=scipy.io.loadmat('filenames.mat')
 newdata_mat=newdata_mat['Filenames']
 ################################################################################################
 #(rate,sig) = wav.read('F:/Semester VII/speech_project/created_me/Training/Nstationary/SpeechTransient_Transient/keyboard-typing/fcjf0_sa2.wav')
