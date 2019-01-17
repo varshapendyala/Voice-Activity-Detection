@@ -30,7 +30,7 @@ def likelihood_calc(data_point):
     return P1,P2
     
 #################################################################################################    
-keyboard_knock_basis=scipy.io.loadmat('F:/Semester VII/speech_project/created_me/Training/Nstationary/SpeechTransient_Transient/keyboard_knock_basis.mat')
+keyboard_knock_basis=scipy.io.loadmat('SpeechTransient_Transient/keyboard_knock_basis.mat')
 data_knock_sa2=keyboard_knock_basis['data_knock_sa2']
 data_key_sa2=keyboard_knock_basis['data_key_sa2']
 lowd_knock_sa2=keyboard_knock_basis['lowd_knock_sa2']
@@ -38,7 +38,7 @@ lowd_key_sa2=keyboard_knock_basis['lowd_key_sa2']
 inv_cov_knock_sa2=keyboard_knock_basis['inv_cov_knock_sa2']
 inv_cov_key_sa2=keyboard_knock_basis['inv_cov_key_sa2']
 
-gmm_param=scipy.io.loadmat('F:/Semester VII/speech_project/created_me/Training/Nstationary/SpeechTransient_Transient/gmm_param2.mat')
+gmm_param=scipy.io.loadmat('SpeechTransient_Transient/gmm_param2.mat')
 weights1=gmm_param['weights1']
 weights2=gmm_param['weights2']
 means1=gmm_param['means1']
@@ -56,8 +56,8 @@ no_eig=3
 
 #Consider a test file:
 #(rate,sig)=wav.read('C:/Users/Varsha/Documents/MATLAB/si999.wav')
-#(rate,sig) = wav.read('F:/Semester VII/speech_project/created_me/Training/SpeechTransient_Transient/keyboard-typing/fcjf0_si1027.wav')
-(rate,sig) = wav.read('F:/Semester VII/speech_project/created_me/Training/SpeechTransient_Transient_Speech/keyboard-typing/fdml0_sx69.wav')
+#(rate,sig) = wav.read('SpeechTransient_Transient/keyboard-typing/fcjf0_si1027.wav')
+(rate,sig) = wav.read('SpeechTransient_Transient_Speech/keyboard-typing/fdml0_sx69.wav')
 mfcc_feat=features.mfcc(sig,rate,winlen=0.032,winstep=0.016)
 
 buffer_size=15
