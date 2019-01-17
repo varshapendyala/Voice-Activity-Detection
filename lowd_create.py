@@ -20,7 +20,7 @@ winstep=0.016
 newdata_mat=scipy.io.loadmat('filenames.mat')
 newdata_mat=newdata_mat['Filenames']
 ################################################################################################
-#(rate,sig) = wav.read('F:/Semester VII/speech_project/created_me/Training/Nstationary/SpeechTransient_Transient/keyboard-typing/fcjf0_sa2.wav')
+#(rate,sig) = wav.read('SpeechTransient_Transient/keyboard-typing/fcjf0_sa2.wav')
 #mfcc_feat=features.mfcc(sig,rate,winlen=0.032,winstep=0.016)
 #basis_data=mfcc_feat
 #
@@ -54,7 +54,7 @@ R=np.concatenate((lowd_knock_sa2,lowd_key_sa2),axis=0)
 no_eig=3
 ###########################################################################################
 for file_num in range(50):
-    (rate1,sig1) = wav.read('F:/Semester VII/speech_project/created_me/Training/Nstationary/SpeechTransient_Transient/keyboard-typing/'+str(newdata_mat[file_num,0][0]))
+    (rate1,sig1) = wav.read('SpeechTransient_Transient/keyboard-typing/'+str(newdata_mat[file_num,0][0]))
     mfcc_feat=features.mfcc(sig1,rate1,winlen=0.032,winstep=0.016)
     new_data=mfcc_feat
 
@@ -86,10 +86,10 @@ for file_num in range(50):
     Unew=np.dot(temp,R)
                 
 ###################################################################################################
-#    label_mat=scipy.io.loadmat('F:/Semester VII/speech_project/created_me/Training/Nstationary/SpeechTransient_Transient/keyboard-typing/keyboard_labels.mat')
+#    label_mat=scipy.io.loadmat('SpeechTransient_Transient/keyboard-typing/keyboard_labels.mat')
 #    label_mat=label_mat['keyboard']
     
-    label_mat=scipy.io.loadmat('F:/Semester VII/speech_project/created_me/Training/Nstationary/SpeechTransient_Transient/knock-on-the-door/knock_labels.mat')
+    label_mat=scipy.io.loadmat('SpeechTransient_Transient/knock-on-the-door/knock_labels.mat')
     label_mat=label_mat['knock']
     
 #    label_mat=scipy.io.loadmat('F:/Semester VII/speech_project/created_me/Training/Nstationary/SpeechTransient_Transient/coughing/coughing_labels.mat')
